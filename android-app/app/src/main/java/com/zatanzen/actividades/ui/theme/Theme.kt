@@ -1,4 +1,4 @@
-package com.zatanzen.starter.ui.theme
+package com.zatanzen.actividades.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -22,9 +22,8 @@ private val DarkColors = darkColorScheme(
 )
 
 @Composable
-fun StarterAppTheme(
+fun ActividadesTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Android 12+ can match the user's wallpaper colors
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit,
 ) {
@@ -36,6 +35,5 @@ fun StarterAppTheme(
         darkTheme -> DarkColors
         else -> LightColors
     }
-
     MaterialTheme(colorScheme = colorScheme, content = content)
 }
